@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">  
+    <link rel="stylesheet" href="style.css?v=4.0">  <!--バージョンをアップすること-->
+    <link rel="icon" href="header.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  <!--GoogleFontマテリアルアイコン-->
+    <meta name="google-site-verification" content="gPLXaqvLXsyzF-yuZsjjI8-sMlqY6Y07RI8vkRmS18w" />  <!--Google Serch Console-->
+    <meta name="description" content="M.FEEL FREE COFFEE がOPENしました。">
+  </head>
+  <title>M.FEEL FREE COFFEE</title>
+  <body>
+    <header>
+      <a href="#TOP"><img src="header.png"></a>
+      <span class="material-icons" id=phone_menu>menu</span> <!--outlineは消す-->
+      <nav class="pc_menu">
+        <ul>
+          <li><a href="#TOP">HOME</a></li>
+          <li><a href="#MENU">MENU</a></li>
+          <li><a href="#ACCESS">ACCESS</a></li>          
+        </ul>
+      </nav>
+    </header>
+    <div class="overlay"> 
+      <nav>
+        <ul>
+          <li><a href="#TOP">HOME</a></li>
+          <li><a href="#MENU">MENU</a></li>
+          <li><a href="#ACCESS">ACCESS</a></li>          
+        </ul>
+      </nav>
+    </div>
+    <main>
+      <section class="title">
+        <img src="top.jpg" alt="トップ画像">
+        <h1>M.FEEL FREE COFFEE</h1>
+      </section>
+        <section class="welcome">
+            <div class="grid1 text">     <!--grid1はテキスト-->
+                <h1>M.へようこそ</h1>
+                <p>とてもアットホームなコーヒーカフェです。</p>
+                <p>ぜひお越しください</p>
+            </div>
+            <div class="grid2 pic">   <!--背景画像で設定する-->
+              <div class="buffer">
+              </div>     
+            </div>
+            <div class="grid3 pic">   <!--スマホでは表示しない-->
+              <div class="buffer">
+              </div>
+            </div>
+        </section>
+        <section class="Foods">
+             <div class="grid1 text">
+                  <h1 id="MENU">MENU</h1>
+                  <div class="taiyaki">
+                      <span class="small_title">スイーツ</span>
+                      <ul>
+                        <li>1 </li>
+                        <li>2 </li>
+                        <li>3 </li>
+                      </ul>
+                      <p></p>         
+                  </div>
+            </div>
+            <div class="grid2 o_taiyaki text">
+                  <span class="small_title">etc</span>
+                  <ul>
+                    <li> </li>
+                    <li> </li>
+                  </ul>
+                  <p></p>         
+            </div>
+            <div class="grid4 pic"> <!--たい焼き画像-->
+              <div class="buffer">
+              </div>
+            </div>
+            <div class="grid5 pic"> <!--白いたい焼き-->
+              <div class="buffer">
+              </div>
+            </div>
+            <div class="grid3 drink text">  
+                <span class="small_title">ドリンク</span>
+                <ul>
+                  <li> ブレンド <span></span></li>
+                  <li> カフェラテ <span></span></li>
+                </ul>
+            </div>
+        </section>
+        <section class="access">
+            <div class="text">
+              <h1 id="ACCESS">ACCESS</h1>
+              <ul>
+                <li>東京都羽村市栄町2丁目2-2 1F</li>
+                <li><span class="material-icons">call</span> 042-xxx-xxxx</li>
+                <li><span class="material-icons">local_cafe</span>
+                  営業時間10:00～17:00</li>
+                <li>定休日：日曜日</li>
+              </ul>
+            </div>
+            <div class="map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d481.19771171118015!2d139.30734579365514!3d35.77293344632389!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60192193babeb6e7%3A0xc8c5c4e9bcce4cd1!2sM.FEEL%20FREE%20COFFEE!5e0!3m2!1sja!2sjp!4v1654392225693!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+          <footer>
+           Copyright <span>M.</span>All rights reserved.
+          </footer>
+    </main>
+    <script src="smoothscroll.js"></script> <!--Safariでスクロールさせる-->
+    <script src = main.js></script>   <!--main.jsは最後に読み込む-->
+  </body>  
+</html>

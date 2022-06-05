@@ -1,0 +1,524 @@
+@charset "utf-8";
+/*モバイルファースト*/
+body{
+  -webkit-appearance:none;  /*iPhoneのデフォルトの設定を解除*/
+  -webkit-text-size-adjust: 100%;
+  margin:0;
+  background: #fff;
+  font-family:sans-serif;
+  text-align: center;
+  color: #000;
+}
+header{
+  background: #ccc;
+  display: flex;
+  width:100%;
+  height: 50px;
+  position: fixed;
+  top:0px;
+  z-index: 2;
+}
+header > a > img {
+  block-size: 40px; /*GoogleFontの規定値を変更*/
+  width:auto;
+  height: 40px;
+  border:5px solid #ccc;
+  opacity: 1;
+}
+
+#phone_menu{
+  color:#fff;
+  font-size: 20px;
+  line-height:30px;
+  block-size: 30px;
+  padding:0 5px;
+  margin-top: 8px;
+  margin-right: 10px;
+  margin-left:auto;
+  cursor: pointer;
+  border:1px solid #fff;
+  border-radius: 5px;
+}
+#phone_menu.selected{
+  color:#999;
+  background-color: #fff;
+}
+.overlay{     /*スマホメニューの背景*/
+  position:fixed;
+  top:40px;
+  width:100px;
+  right: 10px;
+  z-index: 2;
+  background-color: #fff;
+  opacity:0;
+  pointer-events:none;
+  border-radius: 5px;
+}
+.overlay.show{
+  opacity:1;
+  pointer-events: auto;
+}
+.overlay ul{  /*ulに付いてる点とマージンを消す*/
+  list-style-type:none;
+  margin: 0;
+  padding:0;
+  border-radius: 5px;
+  border:solid 1px #000;
+}
+.overlay ul li{
+  padding:8px;
+  text-align: center;
+  border-radius: 5px;
+}
+.overlay ul li a{
+  font-family: serif;
+  color:#000;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+}
+section.title{
+  width:100%;
+  height:70vw;   /*画像の高さ*/
+  position: relative;
+}
+.title img{
+  opacity:1;
+  position: absolute;
+  top:70px;
+  right: 0;
+  left:0;
+  margin:0 auto;
+  z-index:1;      /*ロゴのz=2より低い値*/
+  width: 100%;
+  height: auto;
+  user-select: none;
+  animation:fade_in 5s;
+}
+.title > h1 {
+  color: #eee;
+  font-size: 36px;
+  z-index: 3;
+  margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+@keyframes fade_in{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.welcome{
+  margin-bottom:20px;
+}
+.welcome .grid1{      /*テキスト*/
+  width:100%;
+  display: block;
+  background-color:transparent;
+  color: #000;
+  position:absolute;
+  top:100vh;
+  opacity:0;
+  transform: translateY(70px);
+  transition: opacity 3s, transform 3s;
+  z-index: 1;
+}
+
+.welcome .pic{    /*背景画像*/
+  background-size: contain;
+  width:100vw;
+  opacity:0;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+.welcome .grid2.pic{
+  background-image: url(After_Cafe2.jpg);
+  height:133.33vw;
+}
+.welcome .grid3.pic{
+  background-image: url(in_cafe.jpg);
+  height:56.27vw;
+  display: none;
+}
+
+.welcome .pic.appear{
+  opacity:1;
+  transform:translateY(0);
+}
+.welcome .text.appear{
+  opacity:1;
+  transform:translateY(0);
+}
+
+
+.buffer{      /*画像の明るさ調整*/
+  width:100%;
+  height:100%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+ h1{
+  font-size: 24px;
+  padding: 20px;
+  font-family:serif;
+}
+.welcome h1{
+ font-family:sans-serif;
+}
+.welcome p{
+  font-weight: bold;
+}
+ p{
+  font-size: 18px;
+  padding: 10px;
+}
+.welcome p{
+  text-align: center;
+}
+.welcome .grid3{
+  display: none;
+}
+.Foods .text{
+  width:100%;
+  background-color:transparent;
+  color: #000;
+  position: absolute;
+  opacity:0;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 1;
+}
+.Foods .text.appear{
+  opacity:1;
+  transform:translateY(0);
+}
+.Foods .grid4{
+  margin-bottom: 20px;
+}
+.Foods .pic{
+  background-size: contain;
+  width:100vw;
+  opacity:0;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+.Foods .pic.grid4{
+  background-image: url(Taiyaki.jpg);
+  height:87.85vw; /*高さの指定はマスト*/
+}
+.Foods .pic.grid5{
+  background-image: url(O_taiyaki.jpg);
+  height:80vw;
+}
+.Foods .pic.appear{
+  opacity:1;
+  transform:translateY(0);
+}
+.Foods .text h1{
+  font-weight: bold;
+}
+.taiyaki, .o_taiyaki, .drink {
+  position: relative;
+  left:0;
+  right:0;
+  margin:0 auto;
+  width:90vw;
+  padding:20px 0;
+  font-weight: bold;
+}
+.Foods .text.taiyaki{
+  top:calc(100vh + 133vw);
+}
+.Foods .text.o_taiyaki{
+  position: absolute;
+  top:calc(100vh + 133vw + 112vw);
+}
+.o_taiyaki{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.Foods .text.drink{
+  position:static;
+  background-color: #fff;
+  color: #000;
+  margin-top:20px;
+  font-weight: normal;
+}
+.small_title {
+  position: absolute;
+  display: inline-block;
+  top: -8px;
+  left: 10px;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: transparent;
+}
+.drink .small_title{
+  top:20px;
+  font-weight: bold;
+}
+.Foods .text ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+.Foods .text ul li{
+  font-size: 18px;
+  text-align: left;
+  margin-left:30%;
+}
+.taiyaki p , .o_taiyaki p{
+  font-size: 14px;
+  text-align: right;
+  margin:2vw 3vw;
+  padding: 0;
+}
+.drink ul li span{
+  font-size:14px;
+}
+.access .text{
+  width:100%;
+  background-color: #fff;
+  color: #000;
+}
+.access > p > span{
+  block-size: 24px;
+  line-height: 24px;
+  vertical-align: bottom;
+}
+.access ul li{
+  font-size: 24px;
+  text-align: left;
+  margin-left:25%;
+  list-style: none;
+}
+.access .map iframe{
+  width:100%;
+  height:90vw;   /*縦はVWで指定する*/
+  vertical-align: bottom; /*iframeはインライン要素なので下に空白ができる*/
+  border:0;
+}
+footer{
+  background-color: #999;
+  color:#fff;
+  font-family: serif;
+  font-size: 14px;
+  line-height: 3;
+  width:100%;
+  text-align: center;
+}
+footer span{
+  font-family: sans-serif;
+  color:orange;
+}
+
+
+
+
+/* ここからPC向け */
+.pc_menu{display: none;}
+@media(min-width:900px){
+  .pc_menu{
+    display: block;
+    margin-left:auto;
+    block-size: 50px;
+  }
+  .pc_menu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  .pc_menu a{
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    width: 180px;
+    line-height: 50px;
+    font-family: serif;
+  }
+  .pc_menu a:hover{background-color: #666;}
+  #phone_menu{display: none;}
+
+  .buffer{
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .welcome{
+    display: grid;
+    grid-template-columns: 58vw 38vw;
+    grid-template-rows:1fr 32.64vw;     /*画像比率0.5627x60vw=32.64vw→in_cafeの縦*/
+    gap:1.33vw;       /* 96vwの残り4vw / 3 */
+    width:97.33vw;    /* 96vw + 1.33vw */
+    margin:0 auto 1.33vw; 
+  }
+  .welcome .grid1{      /*テキスト*/  
+    background-color:#fff;
+    color:#000;
+    position:static;
+    border:0;
+  }
+  .welcome p{
+    font-weight: normal;
+  }
+  .welcome .grid3.pic{
+    display: block;
+    width:58vw;
+    height:32.64vw;
+  }
+  
+  .welcome .grid2.pic{    /*外観の画像*/
+    grid-row:1 / 3;
+    grid-column: 2;
+    width:38vw;
+    height:50.665vw;
+  }
+ 
+  h1{
+    font-size: 36px;
+    padding: 12px;
+  }
+  p{
+    font-size: 24px;
+    padding: 12px;
+  }
+  .welcome h1{
+    font-size:30px;
+    padding: 0;
+  }
+  .welcome p{
+    font-size: 20px;
+    padding:0 0 0 10px;
+  }
+  .Foods{
+    display: grid;
+    grid-template-columns: 48vw 48vw;
+    /* grid-template-rows:42.17vw 38.4vw;     画像比率 0.879 x 48vw, 0.8 x 48vw */
+    /* grid-template-rows: 21.085vw 21.085vw 19.2vw 19.2vw; グリッドを細かくする */
+    grid-template-rows: 10.5425vw 10.5425vw 10.5425vw 10.5425vw 9.96vw 9.96vw 9.96vw 9.96vw;
+    column-gap:1.33vw;       /* 96vwの残り4vw / 3 */
+    width:97.33vw;    /* 96vw + 1.33vw */
+    margin:0 auto 1.33vw;  
+    position: relative;
+  }
+  .Foods .text.grid1{    
+    background-color: #999;
+    color: #fff;
+    grid-row:1 / 4;
+    grid-column: 2;
+    border: 0;
+    position: static;
+    top:0;
+    width:48vw;
+    /* height:30vw; */
+    margin-bottom:1.3vw;
+  }
+  .Foods .text.grid2{  
+    background-color: #999;
+    color: #fff;   
+    grid-row:4 / 6;
+    grid-column: 2;
+    border: 0;
+    position: static;
+    width:48vw;
+    margin:0 0 1.3vw;
+  }
+  .Foods .text.grid3{    
+    background-color: #999;
+    color: #fff;  
+    grid-row:6 / 9;
+    grid-column: 2;
+    border: 0;
+    margin:0;
+    position:static;
+    width:48vw;
+  }
+  .Foods .grid4.pic{
+    width:48vw;
+    height:42.17vw;
+    grid-row:1 / 5;
+    grid-column: 1;
+    margin-bottom: 20px;
+  }
+  .Foods .grid5.pic{
+    width:48vw;
+    height:38.4vw;
+    grid-row: 5 / 9;
+    grid-column: 1;
+    margin-top: 20px;     /*pic4 pic5両方にmargin必要*/
+  }
+  .drink{
+    display: block;
+  }
+  .taiyaki, .o_taiyaki, .drink {
+    width:38vw;
+  }
+  .o_taiyaki span{   
+    margin:4vw 2vw;
+  }
+  .o_taiyaki ul{
+    margin:7vw 2vw 2vw;
+  }
+  
+  .o_taiyaki{
+    margin:20px auto 20px;
+  }
+  .small_title{
+    position: absolute;
+    font-size: 24px;
+    left: 14px;
+    display: inline-block;
+    top: 8px;
+    left: 10px;
+    padding: 0 9px;
+    line-height: 1;
+    border-radius: 5px;
+    font-weight: normal;
+    background-color: #999;
+    color:#fff;
+  }
+  .Foods .text ul li{
+    font-size: 24px;
+    font-weight: normal;
+  }
+  .taiyaki p, .o_taiyaki p{
+    font-size: 18px;
+    font-weight: normal;
+  }
+  .drink span{
+    margin:5vw;
+  }
+  .drink ul{
+    margin:8vw 0 5vw 5vw;
+  }
+  .drink ul li span{     /*値段*/
+    font-size:18px;
+    font-weight: normal;
+  }
+  .access{
+    display: flex;
+    margin:0 auto;
+    width:97vw;
+  }
+  .access .text{
+    width:58vw;
+    height: 34vw;
+    margin-right: 1.33vw;
+  }
+  .access .map iframe{
+    width:38vw;
+    height:34vw; 
+    padding: 0;
+    border:0;
+  }
+  footer{
+    font-size: 24px; 
+  }
+}
