@@ -79,19 +79,20 @@ header > a > img {
 }
 .title{
   width:100%;
-  height:70vw;   /*画像の高さ*/
+  height:100vh;   /*画像の高さ*/
   position: relative;
 }
 .title img{
   opacity:1;
   position: absolute;
-  top:70px;
+  top:50px;   /*ヘッダーの高さ*/
   right: 0;
   left:0;
   margin:0 auto;
   z-index:1;      /*ロゴのz=2より低い値*/
   width: 100%;
-  height: auto;
+  height: calc(100vh - 50px); /*ヘッダーとボーダーを引く*/
+  object-fit: cover;
   user-select: none;
   animation:fade_in 5s;
 }
@@ -121,9 +122,8 @@ header > a > img {
 .welcome .grid1{      /*テキスト*/
   width:100%;
   display: block;
-  background-color:transparent;
   color: #000;
-  position:absolute;
+  /* position:absolute; */
   top:100vh;
   opacity:0;
   transform: translateY(70px);
@@ -139,12 +139,12 @@ header > a > img {
   transition: opacity 0.3s, transform 0.3s;
 }
 .welcome .grid2.pic{
-  background-image: url(After_Cafe2.jpg);
-  height:133.33vw;
+  background-image: url(pic1.jpg);
+  height:0px;
 }
 .welcome .grid3.pic{
   background-image: url(in_cafe.jpg);
-  height:56.27vw;
+  height:0px;
   display: none;
 }
 
@@ -188,7 +188,7 @@ header > a > img {
   width:100%;
   background-color:transparent;
   color: #000;
-  position: absolute;
+  /* position: absolute; */
   opacity:0;
   transform: translateY(20px);
   transition: opacity 0.3s, transform 0.3s;
@@ -210,11 +210,11 @@ header > a > img {
 }
 .Foods .pic.grid4{
   background-image: url(Taiyaki.jpg);
-  height:87.85vw; /*高さの指定はマスト*/
+  height:0px; /*高さの指定はマスト*/
 }
 .Foods .pic.grid5{
   background-image: url(O_taiyaki.jpg);
-  height:80vw;
+  height:0px;
 }
 .Foods .pic.appear{
   opacity:1;
@@ -230,7 +230,6 @@ header > a > img {
   margin:0 auto;
   width:90vw;
   padding:20px 0;
-  font-weight: bold;
 }
 .Foods .text.taiyaki{
   top:calc(100vh + 133vw);
@@ -294,10 +293,17 @@ header > a > img {
   line-height: 24px;
   vertical-align: bottom;
 }
+
+.access .text ul {
+  padding: 0;
+  display: block;
+  width:260px; /*文字数に依存する*/
+  margin-left: auto;
+  margin-right: auto;
+}
 .access ul li{
   font-size: 18px;
   text-align: left;
-  margin-left:25%;
   list-style: none;
 }
 .access .map iframe{
@@ -345,7 +351,7 @@ footer span{
     line-height: 50px;
     font-family: serif;
   }
-  .pc_menu a:hover{background-color: #666;}
+  .pc_menu a:hover{background-color: #999;}
   #phone_menu{display: none;}
 
   .buffer{
@@ -516,10 +522,13 @@ footer span{
     height: 34vw;
     margin-right: 1.33vw;
   }
+  .access .text ul {
+    width:350px; /*文字数に依存する*/
+   
+  }
   .access ul li{
     font-size: 24px;
     text-align: left;
-    margin-left:25%;
     list-style: none;
   }
   .access .map iframe{
