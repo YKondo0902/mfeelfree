@@ -48,7 +48,7 @@ header > a > img {
   top:40px;
   width:100px;
   right: 10px;
-  z-index: 2;
+  z-index: 5;
   background-color: #fff;
   opacity:0;
   pointer-events:none;
