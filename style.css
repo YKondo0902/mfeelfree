@@ -1,5 +1,6 @@
 @charset "utf-8";
 /*モバイルファースト*/
+@import url('http://fonts.cdnfonts.com/css/billabong');
 body{
   -webkit-appearance:none;  /*iPhoneのデフォルトの設定を解除*/
   -webkit-text-size-adjust: 100%;
