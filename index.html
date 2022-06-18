@@ -6,8 +6,18 @@
     <link rel="stylesheet" href="style.css?v=2.0">  <!--バージョンをアップすること-->
     <link rel="icon" href="header.png">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  <!--GoogleFontマテリアルアイコン-->
-    <meta name="google-site-verification" content="gPLXaqvLXsyzF-yuZsjjI8-sMlqY6Y07RI8vkRmS18w" />  <!--Google Serch Console-->
     <meta name="description" content="M.FEEL FREE COFFEE がOPENしました。">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.slider').bxSlider({
+                auto: true,
+                pause: 5000,
+            });
+        });
+    </script>
   </head>
   <title>M.FEEL FREE COFFEE</title>
   <body>
@@ -43,16 +53,37 @@
       <section class="menu">
           <img src="fonts/menu.png" id="MENU">  
             <div class="coffee">
-              <img src="fonts/coffee.png">           
+              <img src="fonts/coffee.png">  
+              <div class="slider">
+                <img src="hot.jpg" width="500" height="300">
+                <img src="cafe_late.jpg" width="500" height="300">
+                <img src="ice_coffee.jpg" width="500" height="300">
+                <img src="moca.jpg" width="500" height="300">
+                <img src="caramel.jpg" width="500" height="300">
+              </div>         
             </div> 
-            <div class="tea">
-              <img src="fonts/tea.png">           
-            </div>       
+            <div class="juice">
+              <img src="fonts/juice.png">   
+              <div class="slider">
+                <img src="lemonade.jpg" width="500" height="500" alt="">
+                <img src="cream_soda.jpg" width="500" height="500" alt="">
+              </div>        
+            </div> 
+                  
             <div class="sweets">
-              <img src="fonts/sweets.png">           
+              <img src="fonts/sweets.png">    
+              <div class="slider">
+                <img src="brauny.jpg" width="500" height="300" alt="">
+                <img src="paund.jpg" width="500" height="300" alt="">
+                <img src="pudding.jpg" width="500" height="300" alt="">
+                </div>       
             </div>
             <div class="food">
-              <img src="fonts/food.png">                   
+              <img src="fonts/food.png">       
+              <div class="slider">
+                <img src="an_butter.jpg" width="500" height="300" alt="">
+                <img src="ham_cheese.jpg" width="500" height="300" alt="">
+                </div>            
             </div>
         </section>
 

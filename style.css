@@ -139,8 +139,8 @@ header > a >img:first-child{
 .coffee > img:first-child {
   width: 50%;
 }
-.tea > img:first-child {
-  width: 40%;
+.juice > img:first-child {
+  width: 45%;
 }
 .sweets > img:first-child {
   width: 45%;
