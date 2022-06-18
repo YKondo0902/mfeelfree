@@ -20,30 +20,22 @@ header{
   z-index: 4;
 }
 
-header > a {
-  text-decoration: none;
-  height: 50px; /*headerの高さ*/
-}
-header > a >img {
-  width:40px;
-  height:40px;
-  margin-left: 4px;
-  border:1px solid #fff;
-  border-radius: 5px;
-  vertical-align: middle;
-  display: inline-block;
-}
-
-header > a > p {
-  margin: 0;
-  padding: 0;
-  font-size: 18px;
-  /* font-family: 'Billabong'; */
-  color: #fff;
-  display: block;
-  line-height: 50px;
-  display: inline-block;
-}
+header > a >img:first-child{
+    width:42px;
+    height:42px;
+    margin-left: 4px;
+    margin-top: 4px;
+    border-radius: 5px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  header > a >img:nth-child(2) {
+    width:auto;
+    height:20px;
+    margin-left: 4px;
+    vertical-align: bottom;
+    display: inline-block;
+  }
 
 #phone_menu{
   color:#fff;
@@ -139,178 +131,34 @@ header > a > p {
 .welcome{
   margin-bottom:20px;
 }
-.welcome .grid1{      /*テキスト*/
-  width:100%;
-  height: 100vh;
-  display: block;
-  color: #000;
-  /* position:absolute; */
-  top:100vh;
-  opacity:0;
-  transform: translateY(70px);
-  transition: opacity 3s, transform 3s;
-  z-index: 1;
+
+#MENU {
+  width:40%;
 }
 
-.welcome .pic{    /*背景画像*/
-  background-size: contain;
-  width:100vw;
-  opacity:0;
-  transform: translateY(20px);
-  transition: opacity 0.3s, transform 0.3s;
+.coffee > img:first-child {
+  width: 50%;
 }
-.welcome .grid2.pic{
-  background-image: url(pic1.jpg);
-  height:0px;
+.tea > img:first-child {
+  width: 40%;
 }
-.welcome .grid3.pic{
-  background-image: url(in_cafe.jpg);
-  height:0px;
-  display: none;
+.sweets > img:first-child {
+  width: 45%;
+}
+.food > img:first-child {
+  width: 40%;
 }
 
-.welcome .pic.appear{
-  opacity:1;
-  transform:translateY(0);
-}
-.welcome .text.appear{
-  opacity:1;
-  transform:translateY(0);
+#ACCESS {
+  width: 45%;
 }
 
-
-.buffer{      /*画像の明るさ調整*/
-  width:100%;
-  height:100%;
-  background-color: rgba(255, 255, 255, 0.3);
-}
- h1{
-  font-size: 36px;
-  padding: 20px;
-  font-family:'Billabong';
-}
-.welcome h1{
- font-family:serif;
-}
-.welcome p{
-  font-weight: bold;
-}
- p{
-  font-size: 18px;
-  padding: 10px;
-}
-.welcome p{
-  text-align: center;
-}
-.welcome .grid3{
-  display: none;
-}
-.Foods .text{
-  width:100%;
-  height: 100vh;
-  background-color:transparent;
-  color: #000;
-  /* position: absolute; */
-  opacity:0;
-  transform: translateY(70px);
-  transition: opacity 3s, transform 3s;
-  z-index: 1;
-}
-.Foods .text.appear{
-  opacity:1;
-  transform:translateY(0);
-}
-.Foods .grid4{
-  margin-bottom: 20px;
-}
-.Foods .pic{
-  background-size: contain;
-  width:100vw;
-  opacity:0;
-  transform: translateY(70px);
-  transition: opacity 3s, transform 3s;
-}
-.Foods .pic.grid4{
-  background-image: url(Taiyaki.jpg);
-  height:0px; /*高さの指定はマスト*/
-}
-.Foods .pic.grid5{
-  background-image: url(O_taiyaki.jpg);
-  height:0px;
-}
-.Foods .pic.appear{
-  opacity:1;
-  transform:translateY(0);
-}
-.Foods .text h1{
-  font-weight: bold;
-}
-.taiyaki, .o_taiyaki, .drink {
-  position: relative;
-  left:0;
-  right:0;
-  margin:0 auto;
-  width:90vw;
-  padding:20px 0;
-}
-.Foods .text.taiyaki{
-  top:calc(100vh + 133vw);
-}
-.Foods .text.o_taiyaki{
-  position: absolute;
-  top:calc(100vh + 133vw + 112vw);
-}
-.o_taiyaki{
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.Foods .text.drink{
-  position:static;
-  background-color: #fff;
-  color: #000;
-  margin-top:20px;
-  font-weight: normal;
-}
-.small_title {
-  position: absolute;
-  display: inline-block;
-  top: -8px;
-  left: 10px;
-  padding: 0 9px;
-  line-height: 1;
-  font-size: 24px;
-  font-weight: bold;
-  background-color: transparent;
-}
-.drink .small_title{
-  top:20px;
-  font-weight: bold;
-}
-.Foods .text ul{
-  list-style-type: none;
-  padding: 0;
-}
-
-.Foods .text ul li{
-  font-size: 18px;
-  text-align: left;
-  margin-left:30%;
-}
-.taiyaki p , .o_taiyaki p{
-  font-size: 14px;
-  text-align: right;
-  margin:2vw 3vw;
-  padding: 0;
-}
-.drink ul li span{
-  font-size:14px;
-}
 .access .text{
   width:100%;
   background-color: #fff;
   color: #000;
 }
-.access > .text > ul > li span {
+.access > .text > ul > li span { /*アイコン*/
   font-size: 18px;
   block-size: 18px;
   line-height: 20px;
