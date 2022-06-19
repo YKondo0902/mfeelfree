@@ -139,14 +139,30 @@ header > a >img:first-child{
 .coffee > img:first-child {
   width: 50%;
 }
+.coffee > .slider > img {
+  width: 100%;
+  height: 100vw;
+}
 .juice > img:first-child {
   width: 45%;
 }
-.sweets > img:first-child {
+.sweets > .slider > img {
+  width: 100%;
+  height: 114vw;
+}
+.sweets > img:first-child { /*フォント*/
   width: 45%;
+}
+.sweets > .slider > img {
+  width: 100%;
+  height: 82.19vw;
 }
 .food > img:first-child {
   width: 40%;
+}
+.food > .slider > img {
+  width: 100%;
+  height: 98.59vw;
 }
 
 #ACCESS {
