@@ -140,29 +140,29 @@ header > a >img:first-child{
   width: 50%;
 }
 .coffee > .slider > img {
-  width: 100%;
-  height: 100vw;
+  max-width: 100%;
+  height: auto;
 }
 .juice > img:first-child {
   width: 45%;
 }
 .sweets > .slider > img {
-  width: 100%;
-  height: 114vw;
+  max-width: 100%;
+  height: auto;
 }
 .sweets > img:first-child { /*フォント*/
   width: 45%;
 }
 .sweets > .slider > img {
-  width: 100%;
-  height: 82.19vw;
+  max-width: 100%;
+  height: auto;
 }
 .food > img:first-child {
   width: 40%;
 }
 .food > .slider > img {
-  width: 100%;
-  height: 98.59vw;
+  max-width: 100%;
+  height: auto;
 }
 
 #ACCESS {
@@ -213,7 +213,22 @@ footer span{
   color:orange;
 }
 
-
+/*ダークモード*/
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #fff;
+    color: #000;
+  }
+  header{
+    background: #ccc;
+    display: flex;
+    width:100%;
+    height: 50px;
+    position: fixed;
+    top:0px;
+    z-index: 4;
+  }
+}
 
 
 /* ここからPC向け */
