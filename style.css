@@ -229,6 +229,9 @@ footer span{
     z-index: 4;
   }
 }
+html[theme='dark-mode'] {
+  filter: invert(0) hue-rotate(0deg);
+}
 
 
 /* ここからPC向け */
