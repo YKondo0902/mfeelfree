@@ -5,13 +5,13 @@ body{
   -webkit-appearance:none;  /*iPhoneのデフォルトの設定を解除*/
   -webkit-text-size-adjust: 100%;
   margin:0;
-  background: #fff;
+  background: #fff !important;
   font-family:serif;
   text-align: center;
-  color: #000;
+  color: #000 !important;
 }
 header{
-  background: #ccc;
+  background: #ccc !important;
   display: flex;
   width:100%;
   height: 50px;
@@ -214,7 +214,7 @@ footer span{
 }
 
 /*ダークモード*/
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   body {
     background-color: #fff;
     color: #000;
@@ -231,7 +231,7 @@ footer span{
 }
 html[theme='dark-mode'] {
   filter: invert(0) hue-rotate(0deg);
-}
+} */
 
 
 /* ここからPC向け */
