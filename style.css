@@ -139,9 +139,12 @@ header > a >img:first-child{
 .coffee > img:first-child {
   width: 50%;
 }
-.coffee > .slider > img {
+.coffee > .slider {
   max-width: 100%;
-  height: auto;
+  height: 100vh;
+}
+.slider > img {
+  object-fit: cover;
 }
 .juice > img:first-child {
   width: 45%;
