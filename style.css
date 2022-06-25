@@ -74,19 +74,15 @@ header > a >img:first-child{
   margin: 0;
   padding:0;
   border-radius: 5px;
-  border:solid 1px #000;
+  border:solid 1px #ccc;
 }
-.overlay ul li{
-  padding:8px;
-  text-align: center;
-  border-radius: 5px;
-}
-.overlay ul li a{
-  font-family: serif;
-  color:#000;
+
+.overlay ul li a {
   text-decoration: none;
-  font-size: 16px;
-  border-radius: 5px;
+}
+.overlay ul li a img {
+  width:100%;
+  height: auto;
 }
 .title{
   width:100%;
@@ -165,7 +161,10 @@ header > a >img:first-child{
 #ACCESS {
   width: 45%;
 }
-
+.address {
+  width: 100%;
+  height: auto;
+}
 .access .text{
   width:100%;
   background-color: #fff;
@@ -213,7 +212,7 @@ footer span{
 
 /* ここからPC向け */
 .pc_menu{display: none;}
-@media(min-width:600px){
+@media(min-width:900px){
   main{
     width: 30%;
     margin: 0 auto;
