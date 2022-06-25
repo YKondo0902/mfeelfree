@@ -7,16 +7,15 @@
     <link rel="icon" href="header.png">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  <!--GoogleFontマテリアルアイコン-->
     <meta name="description" content="M.FEEL FREE COFFEE がOPENしました。">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="jquery.bxslider.js"></script>
+    <link href="jquery.bxslider.css" rel="stylesheet" />
     <script type="text/javascript">
-        $(document).ready(function(){
-            $('.slider').bxSlider({
-                auto: false,
-                pause: 5000,
-            });
+      jQuery(document).ready(function($){
+        $('.bxslider').bxSlider({
+        auto: false,
         });
+    });
     </script>
   </head>
   <title>M.FEEL FREE COFFEE</title>
@@ -53,16 +52,16 @@
       <section class="menu">
           <img src="fonts/menu.png" id="MENU">  
             <div class="coffee">
-              <img src="fonts/coffee.png">  
-              <div class="slider">
-                <img src="hot.png" >
-                <img src="cafe_late.png" >
-                <img src="ice_coffee.png" >
-                <img src="moca.png" >
-                <img src="caramel.png" >
-              </div>         
+              <img src="fonts/coffee.png">
+              <ul class="bxslider">
+                <li><img src="hot.png"></li>
+                <li><img src="cafe_late.png"></li>
+                <li><img src="ice_coffee.png"></li>
+                <li><img src="moca.png"></li>
+                <li><img src="caramel.png"></li>
+              </ul>        
             </div> 
-            <div class="juice">
+            <!-- <div class="juice">
               <img src="fonts/juice.png">   
               <div class="slider">
                 <img src="lemonade.png">
@@ -84,7 +83,7 @@
                 <img src="an_butter.png"> 
                 <img src="ham_cheese.png">
                 </div>            
-            </div>
+            </div> -->
         </section>
 
         <section class="access">
